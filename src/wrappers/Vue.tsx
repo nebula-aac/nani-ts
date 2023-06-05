@@ -25,7 +25,7 @@ export default class VueContainer extends React.PureComponent {
 		};
 	}
 
-	componentDidUpdate(
+	UNSAFE_componentDidUpdate(
 		prevProps: Readonly<{}>,
 		prevState: Readonly<{}>,
 		snapshot?: any,
@@ -39,7 +39,7 @@ export default class VueContainer extends React.PureComponent {
 		Object.assign(this.vueInstanceProxy.$data, props);
 	}
 
-	componentWillMount(): void {
+	UNSAFE_componentWillMount(): void {
 		() => {
 			this.vueInstance.unount();
 		};

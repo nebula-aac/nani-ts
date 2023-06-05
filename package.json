@@ -4,6 +4,7 @@
   "main": "dist/index.js",
   "type": "module",
   "scripts": {
+    "build": " bun build --outdir=dist ./src/index.ts --format=esm --hot",
     "lint": "rome check .",
     "lint:fix": "rome format . --write"
   },
